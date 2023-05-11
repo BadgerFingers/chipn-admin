@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-slate-800 text-grey-light
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4{
+  @apply font-bold text-2xl text-white;
+}
+
+#dash-container{
+  @apply h-full overflow-scroll bg-slate-700 w-full md:w-10/12 pt-8 md:pt-28 px-8 md:px-10;
+}
+#dash-container h1{
+  @apply mb-10;
+}
+
+#nav a#active{
+  @apply bg-grey-light text-grey-dark hover:bg-grey-light hover:text-grey-dark;
+}
+#nav a{
+  @apply hover:bg-slate-600;
+}
+
+/* PROGRESS BAR */
+#progressbar {
+  -webkit-appearance: none;
+   appearance: none;
+  @apply w-full h-4;
+}
+
+#progressbar[value]::-webkit-progress-bar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  @apply bg-white bg-opacity-50 rounded-lg;
+}
+
+#progressbar[value]::-webkit-progress-value {
+  @apply bg-gradient-to-r from-pink to-purple rounded-sm rounded-l-lg 
+}
+
+
+
+/* BUTTON */
+.btn{
+  @apply p-3 text-center font-medium rounded-md transition-colors cursor-pointer
+}
+.btn-gradient{
+  @apply bg-gradient-to-r from-pink to-purple text-white
+}
+.btn-success{
+  @apply bg-green-500 text-white
+}
+.btn-info{
+  @apply bg-blue-500 text-white
+}
+.btn-white{
+  @apply bg-white shadow-md border border-grey-superlight text-slate-500
+}
+.btn-white span,
+.text-gradient{
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-pink to-purple text-white bg-clip-text
+}
+.text-gradient{
+  -webkit-text-fill-color: transparent;
+  @apply bg-gradient-to-r from-pink to-purple text-white bg-clip-text
+}
+
+
+
+/* FORMS */
+form input {
+  @apply text-slate-600 p-2 rounded-md
+}
