@@ -1,0 +1,2 @@
+# Redirect all requests to the index.html file and let the client-side routing handle the routing
+/*  /index.html  200
